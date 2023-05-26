@@ -2,13 +2,16 @@
 
 Caesar Cipher checks
 1.Input Non empty string and lowercase
-2. non negative key which will get added to string elements 
+2. Non negative key which will get added to string elements 
 
 Example 
 input xyz
 key 2
 output zab
 
+charcode range 96-122 (a-z)
+letter.charCodeAt -> gives code beetween 96 to 122 in a-z case
+String.fromCharCode(96) -> gives the letter at character code 96
 */
 
 function caesarCipherEncryptor(inputString, key) {
