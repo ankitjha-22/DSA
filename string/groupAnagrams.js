@@ -15,6 +15,27 @@ function groupAnagrams(words) {
   return result;
 }
 
+function groupAnagrams(words) {
+  let anagrams = {};
+  for (let i = 0; i < words.length; i++) {
+    let charSum = getCharMultiply(words[i]);
+    if (anagrams[charSum]) {
+      anagrams[charSum].push(words[i]);
+    } else {
+      anagrams[charSum] = [words[i]];
+    }
+  }
+  return Object.entries(anagrams).map(([key, val]) => val);
+}
+
+function getCharMultiply(str) {
+  let res = 1;
+  for (let i = 0; i < str.length; i++) {
+    res *= str[i].charCodeAt();
+  }
+  return res;
+}
+
 console.log(
   "Result",
   groupAnagrams(["yo", "act", "flop", "tac", "foo", "cat", "oy", "olfp"])
