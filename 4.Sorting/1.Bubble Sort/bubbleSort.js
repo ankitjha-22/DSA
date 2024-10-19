@@ -6,6 +6,7 @@ function bubbleSort(list) {
 
     // Inner loop compares adjacent elements
     for (let j = 0; j < list.length - 1 - i; j++) {
+      // list.length - 1 - i because for i iterations the array is already sorted and the values are at the end of the array.
       if (list[j] > list[j + 1]) {
         // Swap if they are in the wrong order
         let temp = list[j];
