@@ -112,7 +112,13 @@ function doMerge(mainArray, startIdx, middleIdx, endIdx, auxiliaryArray) {
   while (j <= endIdx) {
     mainArray[k++] = auxiliaryArray[j++];
   }
-}
+}    
 
 
 ```
+
+Input : [8, 5, 2, 9, 5, 6, 3]
+
+middleIdx = Math.floor(0 + 6 / 2) = 3
+
+Input : [8, 5, 2, 9] [5, 6, 3]
